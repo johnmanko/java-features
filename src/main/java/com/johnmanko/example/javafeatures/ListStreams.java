@@ -26,7 +26,7 @@ public class ListStreams {
         
         List<Vehicle> vehicles = EntityBuilder.initVehicles();
         
-        if (!vehicles.stream().allMatch((vehicle) -> vehicle.getMake().equalsIgnoreCase("Chevy"))) {
+        if (!vehicles.stream().anyMatch((vehicle) -> vehicle.getMake().equalsIgnoreCase("Chevy"))) {
             Logger.log("There are no Chevy vehicles");            
         }
         
